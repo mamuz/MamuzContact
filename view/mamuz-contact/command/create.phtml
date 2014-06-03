@@ -1,0 +1,27 @@
+<?php
+$this->headTitle()->append('MamuzContact');
+echo '<h1>' . $this->translate('MamuzContact') . '</h1>';
+
+if (isset($this->contact)) {
+    /** @var \MamuzContact\Entity\MamuzContact $contact */
+    $contact = $this->contact;
+    echo $this->alert($this->translate('Thank you for sending message.'), 'alert-success');
+    echo '<h2><small>' . $this->translate('Summary') . '</small></h2>';
+    echo '<dl class="dl-horizontal">';
+    foreach ($contact->toArray() as $field => $value) {
+        echo '<dt>' . $this->translate($field) . '</dt>';
+        echo '<dd>' . nl2br($this->escapeHtml($value)) . '</dd>';
+    }
+    echo '</dl>';
+} else {
+    /** @var \Zend\Form\Form $form */
+    $form = $this->form;
+    $form->setAttribute('action', $this->url('contact'));
+    $form->prepare();
+
+    echo '<div class="well bs-component">';
+    echo $this->form()->openTag($form);
+    echo $this->form($form);
+    echo $this->form()->closeTag();
+    echo '</div>';
+}
