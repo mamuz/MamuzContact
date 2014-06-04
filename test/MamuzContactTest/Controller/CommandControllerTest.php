@@ -44,15 +44,11 @@ class CommandControllerTest extends \PHPUnit_Framework_TestCase
         $this->commandInterface = \Mockery::mock('MamuzContact\Feature\CommandInterface');
         $this->formInterface = \Mockery::mock('Zend\Form\FormInterface');
 
-        /** @var \Zend\ServiceManager\ServiceManager $serviceManager */
-        $serviceManager = Bootstrap::getServiceManager();
         $this->fixture = new CommandController($this->commandInterface, $this->formInterface);
         $this->request = new Request();
         $this->routeMatch = new RouteMatch(array('controller' => 'index'));
         $this->event = new MvcEvent();
-        $config = $serviceManager->get('Config');
-        $routerConfig = isset($config['router']) ? $config['router'] : array();
-        $router = HttpRouter::factory($routerConfig);
+        $router = HttpRouter::factory();
 
         $this->request->setRequestUri($this->uri);
         $this->prg = \Mockery::mock('Zend\Mvc\Controller\Plugin\PostRedirectGet');
@@ -63,7 +59,6 @@ class CommandControllerTest extends \PHPUnit_Framework_TestCase
         $this->event->setRouter($router);
         $this->event->setRouteMatch($this->routeMatch);
         $this->fixture->setEvent($this->event);
-        $this->fixture->setServiceLocator($serviceManager);
     }
 
     public function testExtendingZendActionController()
