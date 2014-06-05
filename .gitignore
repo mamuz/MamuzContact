@@ -1,5 +1,4 @@
 !.gitignore
-composer.phar
 vendor
 vendor/*
 .idea

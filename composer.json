@@ -1,17 +1,14 @@
 {
     "name"             : "mamuz/mamuz-contact",
-    "description"      : "Contact form",
+    "type"             : "library",
+    "description"      : "Provides simple contact form feature.",
+    "homepage"         : "https://github.com/mamuz/MamuzContact",
+    "license"          : "MIT",
     "keywords"         : ["mamuz", "contact"],
     "authors"          : [
         {
             "name" : "Marco Muths",
             "email": "muzzi_is@web.de"
-        }
-    ],
-    "repositories"     : [
-        {
-            "type": "composer",
-            "url" : "http://packages.zendframework.com/"
         }
     ],
     "minimum-stability": "dev",
@@ -25,8 +22,13 @@
         "zendframework/zendservice-recaptcha": "~2.0.1"
     },
     "require-dev"      : {
-        "satooshi/php-coveralls"   : "dev-master",
-        "phpunit/phpunit"          : "4.1.*",
-        "mockery/mockery"          : "0.9.*"
+        "satooshi/php-coveralls": "dev-master",
+        "phpunit/phpunit"       : "4.1.*",
+        "mockery/mockery"       : "0.9.*"
+    },
+    "autoload"         : {
+        "psr-0": {
+            "MamuzContact\\": "src/"
+        }
     }
 }
