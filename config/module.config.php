@@ -6,7 +6,7 @@ return array(
             'contact' => array(
                 'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/contact[/]',
+                    'route'    => '/contact',
                     'defaults' => array(
                         'controller' => 'MamuzContact\Controller\Command',
                         'action'     => 'create',
