@@ -1,10 +1,10 @@
 {
     "name"             : "mamuz/mamuz-contact",
     "type"             : "library",
-    "description"      : "Provides simple contact form feature.",
+    "description"      : "Provides simple contact form rendered by twitter-bootstrap view helper for ZF2 with Doctrine",
     "homepage"         : "https://github.com/mamuz/MamuzContact",
     "license"          : "MIT",
-    "keywords"         : ["mamuz", "contact"],
+    "keywords"         : ["mamuz", "contact", "form", "zf2", "twitter-bootstrap", "doctrine"],
     "authors"          : [
         {
             "name" : "Marco Muths",
@@ -17,7 +17,6 @@
         "php"                                : ">=5.4",
         "zendframework/zendframework"        : "~2.3.1",
         "doctrine/doctrine-orm-module"       : "0.*",
-        "maglnet/magl-markdown"              : "1.*",
         "neilime/zf2-twb-bundle"             : "2.*@stable",
         "zendframework/zendservice-recaptcha": "~2.0.1"
     },

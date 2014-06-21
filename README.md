@@ -10,29 +10,65 @@
 [![Latest Unstable Version](https://poser.pugx.org/mamuz/mamuz-contact/v/unstable.svg)](https://packagist.org/packages/mamuz/mamuz-contact)
 [![License](https://poser.pugx.org/mamuz/mamuz-contact/license.svg)](https://packagist.org/packages/mamuz/mamuz-contact)
 
+## Domain
+
+ - This module provides a simple contact form.
+ - Submitted contact requests will persist in a database.
+ - To force submit by humans captcha is provided.
+ - Contact Form is rendered by twitter-bootstrap viewhelper.
+
 ## Installation
 
-Run doctrine orm command line to create database table:
+The recommended way to install
+[`mamuz/mamuz-contact`](https://packagist.org/packages/mamuz/mamuz-contact) is through
+[composer](http://getcomposer.org/) by adding dependency to your `composer.json`:
 
-Dump the sql..
-```sh
-./vendor/bin/doctrine-module  orm:schema-tool:update --dump-sql
+```json
+{
+    "require": {
+        "mamuz/mamuz-contact": "0.*"
+    }
+}
 ```
-Force update
-```sh
-./vendor/bin/doctrine-module  orm:schema-tool:update --force
+
+After that run `composer update` and enable this module for ZF2 by adding
+`MamuzContact` to the `modules` key in `./config/application.config.php`:
+
+```php
+// ...
+    'modules' => array(
+        'MamuzContact',
+    ),
 ```
-In usage of environment variable..
+
+This module is based on [`DoctrineORMModule`](https://github.com/doctrine/DoctrineORMModule)
+and be sure that you have already [configured database connection](https://github.com/doctrine/DoctrineORMModule).
+
+Create database tables with command line tool provided by
+[`DoctrineORMModule`](https://github.com/doctrine/DoctrineORMModule):
+
+### Dump the sql to fire it manually
 ```sh
-export APPLICATION_ENV=development; ./vendor/bin/doctrine-module  orm:schema-tool:update
+./vendor/bin/doctrine-module orm:schema-tool:update --dump-sql
 ```
+
+### Fire sql automaticly
+
+```sh
+./vendor/bin/doctrine-module orm:schema-tool:update --force
+```
+
+## Configuration
+
+This module is already configured out of the box, but you can overwrite it by
+adding a config file in `./config/autoload` directory.
+For default configuration see
+[`module.config.php`](https://github.com/mamuz/MamuzContact/blob/master/config/module.config.php)
 
 ## Captcha Support
 
-### Configuration
-
-Create a new config file and place it to config/autoload. Insert an array with options
-for the Zend Captcha form element factory. e.g:
+Create a new config file and place it to `./config/autoload` directory.
+Insert an array with options for the Zend Captcha form element factory:
 
 ```php
 return array(
@@ -58,15 +94,14 @@ return array(
 
 ### Requirement for Google ReCaptcha WebService
 
-Register your domain to [Google ReCaptcha WebService](http://recaptcha.net/) to
+Register your domain to [`Google ReCaptcha WebService`](http://recaptcha.net/) to
 create a private key and a public key. Be sure that private key will not commit to VCS.
-Usage of Recaptcha requires [ZendService_Recaptcha](https://github.com/zendframework/ZendService_ReCaptcha).
-Add this dependency to composer.json.
+Usage of Recaptcha requires [`ZendService_Recaptcha`](https://github.com/zendframework/ZendService_ReCaptcha).
 
-## Workflow
+## Workflow and Events
 
-After filtering and validation of user input a new contact entity will be stored in database.
-Storing is intercepted by trigger post and pre events:
+After filtering and validation of user input a new contact entity will be persisted in database table `MamuzContact`.
+Persistence is intercepted by triggering pre- and post-events:
 
-- persist.pre
-- persist.post
+- `persist.pre`
+- `persist.post`
