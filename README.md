@@ -12,9 +12,9 @@
 
 ## Domain
 
- - This module provides a simple contact form.
+ - This module provides a contact form.
  - Submitted contact requests will persist in a database.
- - To force submit by humans captcha is provided.
+ - To force submit by humans captcha support is provided.
  - Contact Form is rendered by twitter-bootstrap viewhelper.
 
 ## Installation
@@ -68,7 +68,8 @@ For default configuration see
 ## Captcha Support
 
 Create a new config file and place it to `./config/autoload` directory.
-Insert an array with options for the Zend Captcha form element factory:
+Insert an array with options for the Zend Captcha form element factory.
+Options array must have the key `captcha`, for e.g.:
 
 ```php
 return array(
@@ -100,8 +101,8 @@ Usage of Recaptcha requires [`ZendService_Recaptcha`](https://github.com/zendfra
 
 ## Workflow and Events
 
-After filtering and validation of user input a new contact entity will be persisted in database table `MamuzContact`.
+After filtering and validation of user input a new contact entity will persist in database table `MamuzContact`.
 Persistence is intercepted by triggering pre- and post-events:
 
-- `persist.pre`
-- `persist.post`
+- `persist.pre` @ `MamuzContact\Service\Command`
+- `persist.post` @ `MamuzContact\Service\Command`
