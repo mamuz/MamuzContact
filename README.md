@@ -16,6 +16,7 @@
  - Submitted contact requests will persist in a database.
  - To force submit by humans captcha support is provided.
  - Contact Form is rendered by twitter-bootstrap viewhelper.
+ - Bootstrap 2/3 compatible.
 
 ## Installation
 
