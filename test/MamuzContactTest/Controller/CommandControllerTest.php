@@ -3,7 +3,6 @@
 namespace MamuzContactTest\Controller;
 
 use MamuzContact\Controller\CommandController;
-use MamuzContactTest\Bootstrap;
 use Zend\Http\PhpEnvironment\Request;
 use Zend\Http\PhpEnvironment\Response;
 use Zend\Mvc\MvcEvent;
