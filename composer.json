@@ -21,7 +21,7 @@
         "zendframework/zendservice-recaptcha": "~2.0.1"
     },
     "require-dev"      : {
-        "satooshi/php-coveralls": "dev-master",
+        "satooshi/php-coveralls": "0.6.*",
         "phpunit/phpunit"       : "4.1.*",
         "mockery/mockery"       : "0.9.*"
     },
