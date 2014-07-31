@@ -5,6 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/mamuz/MamuzContact/badge.png?branch=master)](https://coveralls.io/r/mamuz/MamuzContact?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mamuz/MamuzContact/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mamuz/MamuzContact/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/504a3291-ab11-4b15-9322-62311bc610a9/mini.png)](https://insight.sensiolabs.com/projects/504a3291-ab11-4b15-9322-62311bc610a9)
+[![HHVM Status](http://hhvm.h4cc.de/badge/mamuz/mamuz-contact.png)](http://hhvm.h4cc.de/package/mamuz/mamuz-contact)
 
 [![Latest Stable Version](https://poser.pugx.org/mamuz/mamuz-contact/v/stable.svg)](https://packagist.org/packages/mamuz/mamuz-contact)
 [![Total Downloads](https://poser.pugx.org/mamuz/mamuz-contact/downloads.svg)](https://packagist.org/packages/mamuz/mamuz-contact)
