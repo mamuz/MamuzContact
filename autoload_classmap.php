@@ -6,6 +6,8 @@ return array(
   'MamuzContact\DomainManager\Factory'               => __DIR__ . '/src/MamuzContact/DomainManager/Factory.php',
   'MamuzContact\DomainManager\ProviderInterface'     => __DIR__ . '/src/MamuzContact/DomainManager/ProviderInterface.php',
   'MamuzContact\Entity\Contact'                      => __DIR__ . '/src/MamuzContact/Entity/Contact.php',
+  'MamuzContact\EventManager\AwareTrait' => __DIR__ . '/src/MamuzContact/EventManager/AwareTrait.php',
+  'MamuzContact\EventManager\Event'      => __DIR__ . '/src/MamuzContact/EventManager/Event.php',
   'MamuzContact\Feature\CommandInterface'            => __DIR__ . '/src/MamuzContact/Feature/CommandInterface.php',
   'MamuzContact\Form\CreateFactory'                  => __DIR__ . '/src/MamuzContact/Form/CreateFactory.php',
   'MamuzContact\Mapper\Db\Command'                   => __DIR__ . '/src/MamuzContact/Mapper/Db/Command.php',
