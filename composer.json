@@ -15,14 +15,26 @@
     "prefer-stable"    : true,
     "require"          : {
         "php"                                : ">=5.4",
-        "zendframework/zendframework"        : "~2.3.1",
+        "zendframework/zend-mvc"             : "~2.3",
+        "zendframework/zend-servicemanager"  : "~2.3",
+        "zendframework/zend-eventmanager"    : "~2.3",
+        "zendframework/zend-modulemanager"   : "~2.3",
+        "zendframework/zend-loader"          : "~2.3",
+        "zendframework/zend-view"            : "~2.3",
+        "zendframework/zend-http"            : "~2.3",
+        "zendframework/zend-form"            : "~2.3",
+        "zendframework/zend-stdlib"          : "~2.3",
+        "zendframework/zend-i18n"            : "~2.3",
+        "zendframework/zend-captcha"         : "~2.3",
+        "zendframework/zend-filter"          : "~2.3",
+        "zendframework/zend-validator"       : "~2.3",
         "doctrine/doctrine-orm-module"       : "0.*",
         "neilime/zf2-twb-bundle"             : "2.*@stable",
         "zendframework/zendservice-recaptcha": "~2.0.1"
     },
     "require-dev"      : {
         "satooshi/php-coveralls": "0.6.*",
-        "phpunit/phpunit": "4.2.*",
+        "phpunit/phpunit"       : "4.2.*",
         "mockery/mockery"       : "0.9.*"
     },
     "autoload"         : {

@@ -21,10 +21,8 @@ class CommandFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testCreation()
     {
-        $em = \Mockery::mock('Zend\EventManager\EventManagerInterface')->shouldIgnoreMissing();
         $objectManager = \Mockery::mock('Doctrine\Common\Persistence\ObjectManager');
         $sm = \Mockery::mock('Zend\ServiceManager\ServiceLocatorInterface');
-        $sm->shouldReceive('get')->with('EventManager')->andReturn($em);
         $sm->shouldReceive('get')->with('Doctrine\ORM\EntityManager')->andReturn($objectManager);
 
         $service = $this->fixture->createService($sm);
