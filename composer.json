@@ -1,46 +1,52 @@
 {
-    "name"             : "mamuz/mamuz-contact",
-    "type"             : "library",
-    "description"      : "Provides simple contact form rendered by twitter-bootstrap view helper for ZF2 with Doctrine",
-    "homepage"         : "https://github.com/mamuz/MamuzContact",
-    "license"          : "MIT",
-    "keywords"         : ["mamuz", "contact", "form", "zf2", "twitter-bootstrap", "doctrine"],
-    "authors"          : [
-        {
-            "name" : "Marco Muths",
-            "email": "mamuz.de@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable"    : true,
-    "require"          : {
-        "php"                                : ">=5.4",
-        "zendframework/zend-mvc"             : "~2.3",
-        "zendframework/zend-servicemanager"  : "~2.3",
-        "zendframework/zend-eventmanager"    : "~2.3",
-        "zendframework/zend-modulemanager"   : "~2.3",
-        "zendframework/zend-loader"          : "~2.3",
-        "zendframework/zend-view"            : "~2.3",
-        "zendframework/zend-http"            : "~2.3",
-        "zendframework/zend-form"            : "~2.3",
-        "zendframework/zend-stdlib"          : "~2.3",
-        "zendframework/zend-i18n"            : "~2.3",
-        "zendframework/zend-captcha"         : "~2.3",
-        "zendframework/zend-filter"          : "~2.3",
-        "zendframework/zend-validator"       : "~2.3",
-        "doctrine/doctrine-orm-module"       : "0.*",
-        "neilime/zf2-twb-bundle"             : "2.*@stable",
-        "zendframework/zendservice-recaptcha": "~2.0.1"
-    },
-    "require-dev"      : {
-        "satooshi/php-coveralls"       : "0.6.*",
-        "phpunit/phpunit"              : "4.*",
-        "mockery/mockery"              : "0.9.*",
-        "mamuz/php-dependency-analysis": "0.*"
-    },
-    "autoload"         : {
-        "psr-0": {
-            "MamuzContact\\": "src/"
-        }
+  "name": "mamuz/mamuz-contact",
+  "type": "library",
+  "description": "Provides simple contact form rendered by twitter-bootstrap view helper for ZF2 with Doctrine",
+  "homepage": "https://github.com/mamuz/MamuzContact",
+  "license": "MIT",
+  "keywords": [
+    "contact",
+    "form",
+    "zf2",
+    "twitter-bootstrap",
+    "doctrine"
+  ],
+  "authors": [
+    {
+      "name": "Marco Muths",
+      "email": "mamuz.de@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.4",
+    "zendframework/zend-mvc": "~2.3",
+    "zendframework/zend-code": "~2.3",
+    "zendframework/zend-servicemanager": "~2.3",
+    "zendframework/zend-eventmanager": "~2.3",
+    "zendframework/zend-modulemanager": "~2.3",
+    "zendframework/zend-view": "~2.3",
+    "zendframework/zend-http": "~2.3",
+    "zendframework/zend-form": "~2.3",
+    "zendframework/zend-stdlib": "~2.3",
+    "zendframework/zend-i18n": "~2.3",
+    "zendframework/zend-captcha": "~2.3",
+    "zendframework/zend-filter": "~2.3",
+    "zendframework/zend-validator": "~2.3",
+    "doctrine/doctrine-orm-module": "~0.8",
+    "neilime/zf2-twb-bundle": "~2.4",
+    "zendframework/zendservice-recaptcha": "~2.0.1"
+  },
+  "require-dev": {
+    "satooshi/php-coveralls": "0.6.*",
+    "phpunit/phpunit": "4.*",
+    "mockery/mockery": "0.9.*",
+    "mamuz/php-dependency-analysis": "0.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "MamuzContact\\": "src/"
+    }
+  }
 }
