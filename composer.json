@@ -23,6 +23,7 @@
     "php": ">=5.4",
     "zendframework/zend-mvc": "~2.3",
     "zendframework/zend-code": "~2.3",
+    "zendframework/zend-session": "~2.3",
     "zendframework/zend-servicemanager": "~2.3",
     "zendframework/zend-eventmanager": "~2.3",
     "zendframework/zend-modulemanager": "~2.3",
